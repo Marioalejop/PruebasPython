@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dashboard</title>
+</head>
+<body>
+    <h2>Dashboard</h2>
+
+    <input id="taskInput" placeholder="Nueva tarea">
+    <select id="filter">
+        <option value="all">Todas</option>
+        <option value="alta">Alta</option>
+    </select>
+    <button id="addTask">Agregar</button>
+
+    <ul id="taskList"></ul>
+
+    <button id="logout">Logout</button>
+
+    <script>
+        let tareas = [];
+
+        document.getElementById("addTask").onclick = () => {
+            const texto = document.getElementById("taskInput").value;
+
+            if (texto) {
+                tareas.push(texto);
+                render();
+            }
+        }
+
+        document.getElementById("filter").onchange = render;
+
+        function render() {
+            const filtro = document.getElementById("filter").value;
+            const lista = document.getElementById("taskList");
+
+            lista.innerHTML = "";
+
+            tareas
+                .filter(t => filtro === "all" || t.includes(filtro))
+                .forEach(t => {
+                    const li = document.createElement("li");
+                    li.className = "task-item";
+                    li.textContent = t;
+                    lista.appendChild(li);
+                });
+        }
+
+        document.getElementById("logout").onclick = () => {
+            window.location.href = "index.html";
+        }
+    </script>
+</body>
+</html>
