@@ -1,0 +1,19 @@
+From HEAD Mon Sep 17 00:00:00 2001
+From: Hypothesis 6.152.2 <no-reply@hypothesis.works>
+Date: Sat, 25 Apr 2026 03:25:37
+Subject: [PATCH] Hypothesis: add explicit examples
+
+---
+--- ./tests\test_ejercicio_4.py
++++ ./tests\test_ejercicio_4.py
+@@ -78,6 +78,10 @@
+         )
+     )
+ )
++@example(
++    lista=['0'],
++    separador='0',
++).via('discovered failure')
+ def test_propiedad_concatenar_preserva_cantidad(lista, separador):
+     """
+     Al dividir el resultado por el separador,
