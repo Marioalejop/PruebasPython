@@ -1,4 +1,0 @@
-# file: C:\Users\ASUS\AppData\Roaming\Python\Python312\site-packages\libcst\codemod\visitors\_gather_string_annotation_names.py
-# hypothesis_version: 6.152.2
-
-['attribute', 'name', 'typing.Literal', 'typing.TypeVar']

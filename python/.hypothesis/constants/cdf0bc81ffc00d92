@@ -1,4 +1,0 @@
-# file: C:\Users\ASUS\AppData\Roaming\Python\Python312\site-packages\libcst\_parser\detect_config.py
-# hypothesis_version: 6.152.2
-
-['(),', '\\\\(\\r\\n?|\\n)', '__future__', 'as', 'from', 'import', 'utf-8']
